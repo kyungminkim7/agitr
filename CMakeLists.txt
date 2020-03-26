@@ -133,6 +133,7 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(hello src/hello.cpp)
 add_executable(pubvel src/pubvel.cpp)
+add_executable(subpose src/subpose.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -150,6 +151,10 @@ target_link_libraries(hello
 )
 
 target_link_libraries(pubvel
+    ${catkin_LIBRARIES}
+)
+
+target_link_libraries(subpose
     ${catkin_LIBRARIES}
 )
 
