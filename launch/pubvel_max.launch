@@ -1,0 +1,18 @@
+<launch>
+
+<node
+    pkg="turtlesim"
+    type="turtlesim_node"
+    name="turtlesim_node"
+    required="true"
+/>
+
+<node
+    pkg="agitr"
+    type="pubvel_max"
+    name="pubvel_max"
+>
+    <param name="max_vel" value="3"/>
+</node>
+
+</launch>

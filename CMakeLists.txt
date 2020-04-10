@@ -136,6 +136,7 @@ add_executable(pubvel src/pubvel.cpp)
 add_executable(subpose src/subpose.cpp)
 add_executable(log src/log.cpp)
 add_executable(reverse_cmd_vel src/reverse_cmd_vel.cpp)
+add_executable(pubvel_max src/pubvel_max.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -165,6 +166,10 @@ target_link_libraries(log
 )
 
 target_link_libraries(reverse_cmd_vel
+    ${catkin_LIBRARIES}
+)
+
+target_link_libraries(pubvel_max
     ${catkin_LIBRARIES}
 )
 
